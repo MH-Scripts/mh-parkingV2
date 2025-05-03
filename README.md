@@ -5,25 +5,25 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/issues">
+  <a href="https://github.com/MH-Scripts/mh-parkingV2/issues">
     <img src="https://img.shields.io/github/issues/MaDHouSe79/mh-parkingV2"/> 
   </a>
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/watchers">
+  <a href="https://github.com/MH-Scripts/mh-parkingV2/watchers">
     <img src="https://img.shields.io/github/watchers/MaDHouSe79/mh-parkingV2"/> 
   </a> 
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/network/members">
+  <a href="https://github.com/MH-Scripts/mh-parkingV2/network/members">
     <img src="https://img.shields.io/github/forks/MaDHouSe79/mh-parkingV2"/> 
   </a>  
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/stargazers">
+  <a href="https://github.com/MH-Scripts/mh-parkingV2/stargazers">
     <img src="https://img.shields.io/github/stars/MaDHouSe79/mh-parkingV2?color=white"/> 
   </a>
-  <a href="https://github.com/MaDHouSe79/mh-parkingV2/blob/main/LICENSE">
-    <img src="https://img.shields.io/github/license/MaDHouSe79/mh-parkingV2?color=black"/> 
+  <a href="https://github.com/MH-Scripts/mh-parkingV2/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/MH-Scripts/mh-parkingV2?color=black"/> 
   </a>      
 </p>
 
 # My Youtube Channel
-- [Subscribe](https://www.youtube.com/c/@MaDHouSe79) 
+- [Subscribe](https://www.youtube.com/@MaDHouSe79) 
 
 # MH Parking V2 (QB/ESX) by MaDHouSe79
 - Auto park and unpark vehicles when you press `F` stort and press `F` long to iqnore the parking.
@@ -52,19 +52,19 @@
 - `E` to lock vehicles on trailers 
 
 # Read Files
-[README FILES](https://github.com/MaDHouSe79/mh-parkingV2/tree/main/readme)
+[README FILES](https://github.com/MH-Scripts/mh-parkingV2/tree/main/readme)
 
 # Screenshots
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/parked.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer6.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer1.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer2.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer3.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer4.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer5.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer7.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/trailer8.png)
-![alttext](https://github.com/MaDHouSe79/mh-parkingV2/blob/main/screenshots/parkmenu.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/parked.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer6.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer1.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer2.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer3.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer4.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer5.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer7.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer8.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/parkmenu.png)
 
 # LICENSE
 [GPL LICENSE](./LICENSE)<br />
