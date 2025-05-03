@@ -42,6 +42,6 @@ end
 AddEventHandler('onResourceStart', function(resource)
     if resource == GetCurrentResourceName() then
         Wait(3000)
-        PerformHttpRequest("https://raw.githubusercontent.com/MaDHouSe79/" .. resource .. "/master/version", checkVersion, "GET")
+        PerformHttpRequest("https://raw.githubusercontent.com/MH-Scripts/" .. resource .. "/master/version", checkVersion, "GET")
     end
 end)
