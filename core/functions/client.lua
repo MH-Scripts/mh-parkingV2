@@ -75,7 +75,6 @@ function Parking.Functions.BlinkVehiclelights(vehicle, state)
 	AttachEntityToEntity(object, ped, GetPedBoneIndex(ped, 57005), 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, true, true, false, true, 1, true)
 	TaskPlayAnim(ped, 'anim@mp_player_intmenu@key_fob@', 'fob_click', 8.0, -8.0, -1, 52, 0, false, false, false)
 	TriggerServerEvent("InteractSound_SV:PlayWithinDistance", 5, "lock", 0.2)
-
 	SetVehicleLights(vehicle, 2)
 	Wait(150)
 	SetVehicleLights(vehicle, 0)
@@ -327,7 +326,7 @@ function Parking.Functions.Save(vehicle)
 			TaskLeaveVehicle(PlayerPedId(), vehicle, 1)
 			Wait(2500)
 			local engineRunning = GetIsVehicleEngineRunning(vehicle)
-			if Config.OnlyAutoParkWhenEngineIsOff and not engineRunning then canSave = false end
+			if Config.OnlyAutoParkWhenEngineIsOn and not engineRunning then canSave = false end
 			if canSave then
 				Parking.Functions.BlinkVehiclelights(vehicle, true)
 				TriggerCallback("mh-parkingV2:server:SaveCar", function(callback)
@@ -364,6 +363,10 @@ function Parking.Functions.DriveVehicle(data)
 	LoadModel(data.mods["model"])
 	local tempVeh = CreateVehicle(data.mods["model"], data.location.x, data.location.y, data.location.z, data.location.h, true)
 	while not DoesEntityExist(tempVeh) do Wait(1) end
+	if Config.UseMHVehicleKeyItem then
+		TriggerEvent('mh-vehiclekeyitem:client:GiveKey', data.plate)
+		TriggerEvent('qb-vehiclekeys:client:AddKeys', data.plate)
+	end
 	SetVehicleProperties(tempVeh, data.mods)
 	DoVehicleDamage(tempVeh, data.body, data.engine)
 	exports[Config.FuelScript]:SetFuel(tempVeh, data.fuel)
@@ -685,6 +688,7 @@ function Parking.Functions.OnJoin()
 end
 
 function Parking.Functions.RefreshVehicles(vehicles)
+	print(json.encode(vehicles,{indent=true}))
 	GlobalVehicles = vehicles
 	Parking.Functions.RemoveVehicles(vehicles)
 	Wait(1000)

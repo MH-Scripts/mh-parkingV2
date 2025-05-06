@@ -54,8 +54,8 @@ function Parking.Functions.RefreshVehicles(src)
 			local target = GetPlayerDataByCitizenId(v.citizenid)
 			if target.PlayerData.citizenid == v.citizenid and target.PlayerData.source ~= nil then
 				if DoesEntityExist(GetPlayerPed(target.PlayerData.source)) then
-					if GetResourceState("qb-vehiclekeys") ~= 'missing' then
-						exports['qb-vehiclekeys']:GiveKeys(target.PlayerData.source, v.plate)
+					if GetResourceState("mh-vehiclekeyitem") ~= 'missing' then
+						exports['mh-vehiclekeyitem']:AddItem(target.PlayerData.source, v.plate) -- mh-vehiclekeyitem add here
 					end
 				end
 			end

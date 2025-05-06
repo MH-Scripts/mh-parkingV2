@@ -15,6 +15,10 @@ end
 -- Fuel Script
 Config.FuelScript = 'mh-fuel'           -- Default is LegacyFuel, if you use a other fuel script, for example ox_fuel
 ----------------------------------------------------------------------------
+-- MH Vehicle Key Item Script
+Config.UseMHVehicleKeyItem = true -- true is you use mh-vehiclekeyitem
+----------------------------------------------------------------------------
+
 -- Notify Script
 Config.DisableParkNotify = false           -- Default true, if false you get many notifications when you enter or leave the vehicle, all other notify massages are stil enable.
 Config.NotifyScript = "ox_lib"             -- Default qb, you can use (qb, ox_lib, k5_notify, okokNotify, Roda_Notifications)
@@ -42,7 +46,7 @@ Config.ParkVehiclesWithTrailers = true     -- Keep it false, don't use this for 
 Config.KeyParkBindButton = "E"
 Config.ParkingButton = 51 -- E
 ----------------------------------------------------------------------------
-Config.OnlyAutoParkWhenEngineIsOff = true
+Config.OnlyAutoParkWhenEngineIsOn = true
 ----------------------------------------------------------------------------
 -- if true parked vehicles are unlocked for vehicle owners, 
 -- you must own this vehicle before this works.
