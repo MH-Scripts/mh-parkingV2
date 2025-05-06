@@ -26,8 +26,9 @@
 - [Subscribe](https://www.youtube.com/@MaDHouSe79) 
 
 # MH Parking V2 (QB/ESX) by MaDHouSe79
-- Auto park and unpark vehicles when you press `F` stort and press `F` long to iqnore the parking.
-- Before you press `F` press the keys `A` or `D` to turn your wheels this will save the wheel angle on your parked vehicle.
+- Auto park and unpark vehicles when you press `F` stort, the engine will stop and you can't auto park.
+- You can auto park when you press `F` long then the engine keeps running and it will parking the vehicle.
+- Before you press `F` use the keys `A` or `D` to turn your wheels, this will save the wheel angle on your parked vehicle.
 
 # Dependencies (QB/ESX)
 - [oxmysql](https://github.com/overextended/oxmysql/releases/tag/v1.9.3)
