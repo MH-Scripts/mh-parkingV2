@@ -83,7 +83,6 @@ function Parking.Functions.IfPlayerIsVIPGetMaxParking(src)
 end
 
 function Parking.Functions.Save(src, data)
-	local xPlayer = GetPlayer(src)
 	local citizenid = GetCitizenId(src)
 	local totalParked = nil
 	if Config.Framework == 'esx' then

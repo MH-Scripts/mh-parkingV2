@@ -2,7 +2,8 @@
 --[[               MH Parking V2 by MaDHouSe79             ]] --
 --[[ ===================================================== ]] --
 -- Vehicle list, you can add more if the vehicle does not exist in this list.
-Config.Vehicles = {
+Config.-- Vehicle list, you can add more if the vehicle does not exist in this list.
+Vehicles = {
     [437538602] = { model = "speeder2", name = "Speeder Yacht", brand = "Pegassi", category = "boats" },
     [191916658] = { model = "streamer216", name = "Streamer216", brand = "Mammoth", category = "planes" },
     [-692292317] = { model = "chernobog", name = "Chernobog", brand = "HVY", category = "military" },

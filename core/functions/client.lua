@@ -326,7 +326,8 @@ function Parking.Functions.Save(vehicle)
 			end
 			TaskLeaveVehicle(PlayerPedId(), vehicle, 1)
 			Wait(2500)
-			if Config.OnlyAutoParkWhenEngineIsOff and GetIsVehicleEngineRunning(vehicle) then canSave = false end
+			local engineRunning = GetIsVehicleEngineRunning(vehicle)
+			if Config.OnlyAutoParkWhenEngineIsOff and not engineRunning then canSave = false end
 			if canSave then
 				Parking.Functions.BlinkVehiclelights(vehicle, true)
 				TriggerCallback("mh-parkingV2:server:SaveCar", function(callback)
