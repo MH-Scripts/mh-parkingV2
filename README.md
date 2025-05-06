@@ -37,7 +37,7 @@
 - [qb-core](https://github.com/qbcore-framework/qb-core) or [esx](https://github.com/esx-framework)
 - [qb-policejob](https://github.com/qbcore-framework/qb-policejob) (for qb-core)
 - [qb-vehiclekeys](https://github.com/qbcore-framework/qb-vehiclekeys) (for qb-core)
-- [mh-vehicleimages](https://github.com/MaDHouSe79/mh-vehicleimages)
+- [mh-vehicleimages](https://github.com/MH-Scripts/mh-vehicleimages)
 
 # Installation
 - Step 1: First stop your server.
