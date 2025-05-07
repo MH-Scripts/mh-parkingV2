@@ -48,8 +48,9 @@
 # Adding vehicles to the system (QB)
 - When a vehicle does not spawn back in, you need to look in `shared/configs/vehicles.lua` and add your vehicles.
 - This is a must for modded vehicles you added and are not in default QB
-- To get the vehicle hash you can find that with /admin than dev / entity vieuwer, you see a hash number when you aim at an entity and that is what you need.
-- esc works with database so you need to add the modded vehicles in esx vehicles table.
+- To get the vehicle hash you can find that with /admin than dev / entity vieuwer, you see a hash number when you aim at an entity and that is what you need,
+- or use the command `/gethashkey`, stand next to the vehicle and type `/gethashkey` and you get the hashkey in your F8 console. 
+- ESX works with database so you need to add the modded vehicles in esx vehicles table.
 
 # Commands
 - `/toggleparktext` Disable or Enable the text above the parked vehicles. (for streamers)
@@ -57,7 +58,8 @@
 - `/addvip [id] [amount]` Add a player as vip (admin only)
 - `/removevip [id]` Remove a vip player (admin only)
 - `F` press it lock to park and press `F` sort to ignore auto park. 
-- `E` to lock vehicles on trailers 
+- `E` to lock vehicles on trailers
+
 
 # Read Files
 [README FILES](https://github.com/MH-Scripts/mh-parkingV2/tree/main/readme)

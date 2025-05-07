@@ -180,3 +180,8 @@ if GetResourceState("qb-core") ~= 'missing' then
 elseif GetResourceState("es_extended") ~= 'missing' then
     lib.addRadialItem({{id = 'CallVehicleDelivery_menu', label = "Call Delivery", icon = 'info', onSelect = function() TriggerEvent("mh-parkingV2:client:GetVehiclesMenu") end }})
 end
+
+RegisterNetEvent('mh-parkingV2:client:gethashkey', function()
+	local vehicle = VehicleInFront(PlayerPedId())
+	if vehicle ~= -1 then print("Vehicle Hash Key: "..GetEntityModel(vehicle)) end
+end)

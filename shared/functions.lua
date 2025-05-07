@@ -40,6 +40,39 @@ function GetEntity(data)
 	return result
 end
 
+function VehicleInFront(ped)
+    local entity = nil
+    local coords = GetEntityCoords(ped)
+    local offset = GetOffsetFromEntityInWorldCoords(ped, 0.0, 2.0, 0.0)
+    local rayHandle = CastRayPointToPoint(coords.x, coords.y, coords.z - 1.3, offset.x, offset.y, offset.z, 10, ped, 0)
+    local _, _, _, _, entity = GetRaycastResult(rayHandle)
+    if IsEntityAVehicle(entity) then
+        lastVehicle = entity
+        return entity
+    end
+end
+
+function GetClosestVehicle(coords)
+    local ped = PlayerPedId()
+    local vehicles = GetGamePool('CVehicle')
+    local closestDistance = -1
+    local closestVehicle = -1
+    if coords then
+        coords = type(coords) == 'table' and vec3(coords.x, coords.y, coords.z) or coords
+    else
+        coords = GetEntityCoords(ped)
+    end
+    for i = 1, #vehicles, 1 do
+        local vehicleCoords = GetEntityCoords(vehicles[i])
+        local distance = #(vehicleCoords - coords)
+        if closestDistance == -1 or closestDistance > distance then
+            closestVehicle = vehicles[i]
+            closestDistance = distance
+        end
+    end
+    return closestVehicle, closestDistance
+end
+
 function GetVehicleProperties(vehicle)
     if DoesEntityExist(vehicle) then
         local pearlescentColor, wheelColor = GetVehicleExtraColours(vehicle)
