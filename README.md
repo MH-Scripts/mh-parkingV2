@@ -48,7 +48,7 @@
 # Adding vehicles to the system (QB)
 - When a vehicle does not spawn back in, you need to look in `shared/configs/vehicles.lua` and add your vehicles.
 - This is a must for modded vehicles you added and are not in default QB
-- To get the vehicle hash you can find that with /admin than dev / entity vieuwer, you see a hash number and that is what you need.
+- To get the vehicle hash you can find that with /admin than dev / entity vieuwer, you see a hash number when you aim at an entity and that is what you need.
 - esc works with database so you need to add the modded vehicles in esx vehicles table.
 
 # Commands
