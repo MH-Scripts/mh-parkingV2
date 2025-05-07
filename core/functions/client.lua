@@ -688,7 +688,6 @@ function Parking.Functions.OnJoin()
 end
 
 function Parking.Functions.RefreshVehicles(vehicles)
-	print(json.encode(vehicles,{indent=true}))
 	GlobalVehicles = vehicles
 	Parking.Functions.RemoveVehicles(vehicles)
 	Wait(1000)
