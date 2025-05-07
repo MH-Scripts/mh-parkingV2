@@ -45,6 +45,11 @@
 - Stap 3: Add `ensure [mh]` in `server.cfg` below `ensure [defaultmaps]`.
 - Step 4: Start your server.  
 
+# Adding vehicles to the system (QB)
+- When a vehicle does not spawn back in, you need to look in `shared/configs/vehicles.lua` and add your vehicles.
+- This is a must for modded vehicles you added and are not in default QB
+- esc works with database so you need to add the modded vehicles in esx vehicles table.
+
 # Commands
 - `/toggleparktext` Disable or Enable the text above the parked vehicles. (for streamers)
 - `/parkmenu` Open the park menu so you can set a waypoint.
