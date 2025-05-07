@@ -50,7 +50,7 @@
 - `/parkmenu` Open the park menu so you can set a waypoint.
 - `/addvip [id] [amount]` Add a player as vip (admin only)
 - `/removevip [id]` Remove a vip player (admin only)
-- `F` press it short to park press it lock to ignore park. 
+- `F` press it lock to park and press `F` sort to ignore auto park. 
 - `E` to lock vehicles on trailers 
 
 # Read Files
