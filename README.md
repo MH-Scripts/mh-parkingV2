@@ -69,16 +69,16 @@
 [README FILES](https://github.com/MH-Scripts/mh-parkingV2/tree/main/readme)
 
 # Screenshots
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/parked.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer6.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer1.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer2.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer3.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer4.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer5.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer7.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer8.png)
-![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/parkmenu.png)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/parked.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer6.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer1.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer2.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer3.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer4.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer5.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer7.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/trailer8.png?raw=true)
+![alttext](https://github.com/MH-Scripts/mh-parkingV2/blob/main/screenshots/parkmenu.png?raw=true)
 
 # LICENSE
 [GPL LICENSE](./LICENSE)<br />
