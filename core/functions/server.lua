@@ -4,10 +4,25 @@
 Parking = {}
 Parking.Functions = {}
 
-function Parking.Functions.GetVehicles(src)
-	local xPlayer = GetPlayer(src)
+function Parking.Functions.IsOwner(src, plate)
+	local Player = GetPlayer(src)
 	local citizenid = GetCitizenId(src)
-	if xPlayer then
+	if Player then
+		local result = nil
+		if Config.Framework == 'esx' then
+			result = MySQL.Sync.fetchAll("SELECT * FROM owned_vehicles WHERE owner = ? AND plate = ?", { citizenid, plate })[1]
+		elseif Config.Framework == 'qb' then
+			result = MySQL.Sync.fetchAll("SELECT * FROM player_vehicles WHERE citizenid = ? AND plate = ?", { citizenidm, plate })[1]
+		end
+		if result.plate ~= nil and result.plate == plate then return true  end
+	end
+	return false
+end
+
+function Parking.Functions.GetVehicles(src)
+	local Player = GetPlayer(src)
+	local citizenid = GetCitizenId(src)
+	if Player then
 		local result = nil
 		if Config.Framework == 'esx' then
 			result = MySQL.Sync.fetchAll("SELECT * FROM owned_vehicles WHERE owner = ? ORDER BY vehicle ASC", { citizenid })
