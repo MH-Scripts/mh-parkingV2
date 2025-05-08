@@ -82,7 +82,7 @@ function Parking.Functions.BlinkVehiclelights(vehicle, state)
 	SetVehicleLights(vehicle, 2)
 	Wait(150)
 	SetVehicleLights(vehicle, 0)
-	TriggerServerEvent('mh-parkingV2:server:SetVehLockState', VehToNet(vehicle), state)
+	TriggerServerEvent('mh-parkingV2:server:SetVehLockState', NetworkGetNetworkIdFromEntity(vehicle), state)
 	SetVehicleDoorsLocked(vehicle, state)
 	if IsEntityPlayingAnim(ped, 'anim@mp_player_intmenu@key_fob@', 'fob_click', 3) then
 		DeleteObject(object)
@@ -273,10 +273,11 @@ function Parking.Functions.DeleteVehicleAtcoords(coords)
 end
 
 function Parking.Functions.LockDoors(entity, data)
-	TriggerServerEvent('mh-parkingV2:server:SetVehLockState', VehToNet(entity), 2)
+	TriggerServerEvent('mh-parkingV2:server:SetVehLockState', NetworkGetNetworkIdFromEntity(entity), 2)
 	SetVehicleDoorsLocked(entity, 2)
+	Wait(10)
 	if Config.VehicleDoorsUnlockedForOwners and PlayerData.citizenid == data.owner then
-		TriggerServerEvent('mh-parkingV2:server:SetVehLockState', VehToNet(entity), 1)
+		TriggerServerEvent('mh-parkingV2:server:SetVehLockState', NetworkGetNetworkIdFromEntity(entity), 1)
 		SetVehicleDoorsLocked(entity, 1)
 	end
 end
@@ -363,10 +364,8 @@ function Parking.Functions.DriveVehicle(data)
 	LoadModel(data.mods["model"])
 	local tempVeh = CreateVehicle(data.mods["model"], data.location.x, data.location.y, data.location.z, data.location.h, true)
 	while not DoesEntityExist(tempVeh) do Wait(1) end
-	if Config.UseMHVehicleKeyItem then
-		TriggerEvent('mh-vehiclekeyitem:client:GiveKey', data.plate)
-		TriggerEvent('qb-vehiclekeys:client:AddKeys', data.plate)
-	end
+	TriggerEvent('mh-vehiclekeyitem:client:GiveKey', data.plate)
+	TriggerEvent('qb-vehiclekeys:client:AddKeys', data.plate)
 	SetVehicleProperties(tempVeh, data.mods)
 	DoVehicleDamage(tempVeh, data.body, data.engine)
 	exports[Config.FuelScript]:SetFuel(tempVeh, data.fuel)
@@ -544,6 +543,8 @@ function Parking.Functions.SpawnVehicles(vehicles)
 		SetModelAsNoLongerNeeded(vehicles[i].mods["model"])
 		Parking.Functions.LockDoors(tempVeh, vehicles[i])
 		if PlayerData.citizenid == vehicles[i].owner then
+			TriggerEvent('mh-vehiclekeyitem:client:GiveKey', vehicles[i].plate)
+			TriggerEvent('qb-vehiclekeys:client:AddKeys', vehicles[i].plate)
 			TriggerServerEvent('mh-parkingV2:server:CreateOwnerVehicleBlip', vehicles[i].plate)
 		end
 		if Config.ParkVehiclesWithTrailers then
@@ -583,6 +584,8 @@ function Parking.Functions.SpawnVehicle(vehicleData)
 	SetModelAsNoLongerNeeded(vehicleData.mods["model"])
 	Parking.Functions.LockDoors(tempVeh, vehicleData)
 	if PlayerData.citizenid == vehicleData.owner then
+		TriggerEvent('mh-vehiclekeyitem:client:GiveKey', vehicleData.plate)
+		TriggerEvent('qb-vehiclekeys:client:AddKeys', vehicleData.plate)
 		TriggerServerEvent('mh-parkingV2:server:CreateOwnerVehicleBlip', vehicleData.plate)
 	end
 	if Config.ParkVehiclesWithTrailers then
@@ -796,7 +799,7 @@ function Parking.Functions.GetInAndOutVehicle()
             local vehicle = GetVehiclePedIsTryingToEnter(ped)
             local seat = GetSeatPedIsTryingToEnter(ped)
             local name = GetDisplayNameFromVehicleModel(GetEntityModel(vehicle))
-            local netId = VehToNet(vehicle)
+            local netId = NetworkGetNetworkIdFromEntity(vehicle)
             isEnteringVehicle = true
             TriggerServerEvent('mh-parkingV2:server:EnteringVehicle', vehicle, seat, name, netId)
         elseif not DoesEntityExist(GetVehiclePedIsTryingToEnter(ped)) and not IsPedInAnyVehicle(ped, true) and isEnteringVehicle then
@@ -811,7 +814,7 @@ function Parking.Functions.GetInAndOutVehicle()
     elseif isInVehicle then
         if not IsPedInAnyVehicle(ped, false) or IsPlayerDead(PlayerId()) then
             local name = GetDisplayNameFromVehicleModel(GetEntityModel(currentVehicle))
-            local netId = VehToNet(currentVehicle)
+            local netId = NetworkGetNetworkIdFromEntity(currentVehicle)
 			currentSeat = GetPedVehicleSeat(ped)
             TriggerServerEvent('mh-parkingV2:server:LeftVehicle', currentVehicle, currentSeat, name, netId)
             isInVehicle = false

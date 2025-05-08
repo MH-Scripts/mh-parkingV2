@@ -13,10 +13,10 @@ elseif GetResourceState("qb-core") ~= 'missing' then
 end
 ----------------------------------------------------------------------------
 -- Fuel Script
-Config.FuelScript = 'mh-fuel'           -- Default is LegacyFuel, if you use a other fuel script, for example ox_fuel
+Config.FuelScript = 'mh-fuel'              -- Default is LegacyFuel, if you use a other fuel script, for example ox_fuel
 ----------------------------------------------------------------------------
 -- MH Vehicle Key Item Script
-Config.UseMHVehicleKeyItem = true -- true is you use mh-vehiclekeyitem
+Config.UseMHVehicleKeyItem = true          -- true is you use mh-vehiclekeyitem
 ----------------------------------------------------------------------------
 
 -- Notify Script
